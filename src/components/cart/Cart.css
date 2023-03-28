@@ -8,3 +8,17 @@
     margin-bottom: 50px;
     height: 600px;
 }
+.cart .ordered{
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 25px;
+    letter-spacing: 0.0015em;
+    text-align: center;
+    color: darkblue;
+    margin-top:50px;
+}
+ .cart .break{
+    color: solid  orangered;
+ }
