@@ -1,6 +1,6 @@
 .shop-container{
     display:grid;
-    grid-template-columns: 4fr,1fr;
+    grid-template-columns: 4fr 1fr;
     margin-left: 50px;
     margin-right: 50px;
 }
@@ -12,5 +12,13 @@
     width: 100%;
      
 
-
+}
+.order{
+    margin-left: 10px;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 25px;
+    letter-spacing: 0.0015em;
 }

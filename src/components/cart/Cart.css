@@ -1,0 +1,10 @@
+.cart{
+    position: sticky;
+    top: 0;
+    background-color: rgb(190, 214, 231);
+    color: black;
+    border-radius: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    height: 600px;
+}
