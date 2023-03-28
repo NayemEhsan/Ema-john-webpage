@@ -19,18 +19,27 @@ const Shop = () => {
     // local storage related .................
     useEffect(() => {
      const storedCart =getShoppingCart();
+     const savedCart =[];
     //  step 1: get id
+    // step no 2 : get the product using id
+    // step np 3 : get quantity of the product
+    // step 4 : add the addedProduct to the saved cart
+    // step 5:set the cart
     for(const id in storedCart){
-        // step no 2 : get the product using id
-        const addedProduct = products.find(product =>product.id ===id );
-        // step np 3 : get quantity of the product
-        const quantity = storedCart[id];
-        addedProduct.quantity =quantity;
-        console.log(addedProduct);
+       
+        const addedProduct = products.find(product =>product.id ===id );      
+        if (addedProduct){
+            const quantity = storedCart[id];
+            addedProduct.quantity =quantity;
+            savedCart.push(addedProduct);
+            // console.log(addedProduct);
+        }
     }
+    setCart(savedCart);
 
      
-    },[])
+    },[products])
+    // local storage close
      
     const handleAddToCart =(product)=>{
 
