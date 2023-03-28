@@ -16,10 +16,20 @@ const Shop = () => {
    
 
 
-    // local storage related
+    // local storage related .................
     useEffect(() => {
      const storedCart =getShoppingCart();
-     console.log(storedCart);
+    //  step 1: get id
+    for(const id in storedCart){
+        // step no 2 : get the product using id
+        const addedProduct = products.find(product =>product.id ===id );
+        // step np 3 : get quantity of the product
+        const quantity = storedCart[id];
+        addedProduct.quantity =quantity;
+        console.log(addedProduct);
+    }
+
+     
     },[])
      
     const handleAddToCart =(product)=>{
